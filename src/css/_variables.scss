@@ -1,3 +1,30 @@
 $main-accent-color: #3F8DA8;
 $secondary-accent-color: #92E0E5;
 $font-style: raleway;
+
+@mixin circular {
+    clip-path: circle(50% at 50% 50%);
+}
+
+@mixin hide{
+    display: none;
+}
+
+$small-border-width: 230px;
+$small-image-width: $small-border-width - 5px;
+
+@mixin buttonFormat {
+    color: $main-accent-color;
+    border: solid $main-accent-color;
+    background: white;
+    font-size: 19px;
+    margin-top: 1px;
+    font-weight: 400;
+    padding: 8px 14px;
+    margin-top: 10px;
+    &:hover {
+              color: #14396A !important;
+              background: $main-accent-color;
+              cursor: pointer;
+            }
+}
