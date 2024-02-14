@@ -1,16 +1,159 @@
 @import 'variables';
 
-body {
-  background: url('../../dist/images/park.jpg') center/cover;
-  height: 100vh;
-  width: 100%;
+* {
+  font-family: $font-style;
+  font-weight: 300;
 }
 
+body {
+  width: 100%;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}    
+
 nav {
-  // Example of using a variable:
+    background-color: $secondary-accent-color;
+    width: 98%;
+    height: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navButtons {
+  padding-right: 15px;
+}
+
+.navButtons input {
   background-color: $secondary-accent-color;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .dog-icon {
   width: 50px;
+  margin-left: 35px;
+}
+
+.imageWrapper {
+  background: url(../../dist/images/park.jpg) top no-repeat;
+  background-size: 98% 54rem;
+  flex-direction: column;
+  justify-content: center;
+  height: 33rem;
+  width: 100vw;
+  align-items: center;
+  padding-bottom: 19px;
+}
+
+.infoPage {
+  flex-direction: column;
+  height: 36rem;
+  width: 100vw;
+  background: white;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+.flex{
+  display: flex;
+}
+
+.dogOne{
+  clip-path: circle(50% at 50% 50%);
+  width: 285px;
+  height: 285px;
+}
+
+.imageWrapper .imageBorder {
+  clip-path: circle(50% at 50% 50%);
+  width: 295px;
+  height: 295px;
+  background-color: #3F8DA8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 27px;
+}
+
+.imageBorder{
+  clip-path: circle(50% at 50% 50%);
+  width: 245px;
+  height: 245px;
+  background-color: #3F8DA8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 27px;
+}
+
+.infoPage img {
+  clip-path: circle(50% at 50% 50%);
+  width: 240px;
+  height: 240px;
+}
+
+input {
+  color: #3F8DA8;
+  font-size: 15px;
+  padding: 8px 14px;
+  border: solid #3F8DA8;
+  background: #EEEEEE;
+  margin-top: 10px;
+  &:hover {
+    color: #14396A !important;
+    background: #3F8DA8;
+    cursor: pointer;
+  }
+}
+
+.imageWrapper input{
+  font-size: 23px;
+}
+
+.infoPage section {
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  width: 24rem;
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #92E0E5;
+  width: 98vw;
+  height: 10rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+h2 {
+text-align: center;
+}
+
+.socials img:hover {
+  border: solid;
+  border-width: thin;
+  cursor: pointer;
 }
