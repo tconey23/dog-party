@@ -1,12 +1,8 @@
 @import 'variables';
 
-* {
-  font-family: $font-style;
-  font-weight: 300;
-}
-
 body {
   display: flex;
+  font-family: $font-style;
   position: absolute;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,11 +19,13 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  .dog-icon {
+
+  .dogIcon {
     width: 35px;
     margin-left: 30px;
     margin-top: 4px
     }
+
     .navButtons {
     padding-right: 15px;
   
@@ -38,25 +36,31 @@ nav {
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 6px;
+
         &:nth-child(1) {
         margin-right: -6px;
         }
+
         &:nth-child(2) {
         margin-right: 2px;
         }
+
         &:nth-child(3) {
         margin-right: 9px;
         margin-left: -6px;
         }
+
         &:hover{
           color: $main-accent-color;
           cursor: pointer;
         }
+
       }
+
     }
 
   }
-  
+
 .imageWrapper {
   display: flex;
   background: url(../../dist/images/park.jpg) top no-repeat;
@@ -67,21 +71,19 @@ nav {
   width: 100vw;
   align-items: center;
   padding-bottom: 21px;
+
   input {
     @include buttonFormat;
-    
   }
+
   h3 {
     font-size: 34px;
     margin-bottom: 21px;
     padding-bottom: 7px;
     margin-top: 27px;
+    font-weight: 300
   }
-  .dogOne{
-    @include circular;
-    width: 320px;
-    height: 320px;
-  }
+
   .imageBorder {
     @include circular;
     width: 330px;
@@ -91,9 +93,16 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 27px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+
+    .dogOne{
+      @include circular;
+      width: 320px;
+      height: 320px;
+    }
   }
+
 }
 
 .infoPage {
@@ -137,11 +146,13 @@ nav {
     justify-content: center;
     align-items: center;
     margin-top: 19px;
+
     img {
       @include circular;
       width: $small-image-width;
       height: $small-image-width;
     }
+
   }
 
   p{
@@ -193,8 +204,10 @@ footer {
     font-weight: 400;
     color: white;
     }
+
   .socials {
     padding-top: 10px;
+    
     img {
       $marginLeft: 30px;
       margin-left: $marginLeft;
@@ -202,10 +215,14 @@ footer {
       $imgHeight: 50px;
       height: $imgHeight;
       width: $imgHeight;
+
       &:hover {
         mix-blend-mode: soft-light;
         cursor: pointer;
       }
+
     }
+
   }
+
 }
